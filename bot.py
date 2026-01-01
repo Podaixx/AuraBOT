@@ -4,7 +4,9 @@ from discord.ext import commands
 import json
 import os
 
-TOKEN = "MTQ1NjQwNTQ5NzIyODgyMDY0Mg.GrzhgM.wrqLADNSTxRfursTw4I5aJy8O4N2qrxOlLlceo"
+import os
+TOKEN = os.getenv("DISCORD_TOKEN")
+
 
 INTENTS = discord.Intents.default()
 INTENTS.members = True
@@ -99,3 +101,5 @@ async def rank(interaction: discord.Interaction):
 
 
 bot.run(TOKEN)
+
+#update
